@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# ChatGPT Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simple clone of a chat application using OpenAI's GPT-3.5 Turbo model. It includes a React frontend for the user interface and an Express server to interact with the OpenAI API. Users can input messages, and the application will generate responses using the GPT-3.5 Turbo model.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **User-friendly Interface**: The application provides a clean and user-friendly interface for users to interact with.
 
-### `npm start`
+- **Chat History**: The sidebar displays a history of unique chat titles, allowing users to review their previous conversations.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Dynamic Chat Feed**: The main section dynamically updates to show the ongoing chat feed, including user input and GPT-generated responses.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **New Chat Button**: Users can start a new chat session by clicking the "+ New Chat" button in the sidebar.
 
-### `npm test`
+## Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
 
-### `npm run build`
+   ```bash
+   git clone https://github.com/Otavie/react-chatgpt-clone-advanced.git
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Navigate to the project directory:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   cd react-chatgpt-clone-advanced
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Install dependencies:
 
-### `npm run eject`
+   ```bash
+   # Install backend dependencies
+   npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   # Navigate to the frontend directory
+   cd frontend
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   # Install frontend dependencies
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Run the application:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   # Run the backend server
+   npm start:backend
 
-## Learn More
+   # Run the React app
+   npm start:frontend
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. Access the application in your web browser at [http://localhost:3000](http://localhost:3000).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Areas of Improvement
 
-### Code Splitting
+1. **Error Handling**: Implementation of robust error handling mechanisms for API calls and other potential errors to enhance the user experience.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. **Loading States**: Addition of loading indicators or messages to inform users when the application is processing a request.
 
-### Analyzing the Bundle Size
+3. **User Authentication**: Integration of user authentication to allow users to have personalized chat histories and experiences.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. **Responsive Design**: Enhancement of the application's responsiveness to different screen sizes and devices for a better user experience.
 
-### Making a Progressive Web App
+5. **Optimization**: Optimization of the codebase for better performance, and consider implementing features like pagination for large chat histories.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+6. **User Feedback**: Provision of feedback to users on the status of their requests, such as success messages or error notifications.
 
-### Advanced Configuration
+7. **Documentation**: Enhancement of the documentation, including adding inline comments, to make the codebase more understandable for developers who may contribute to or maintain the project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+8. **Deployment**: Deployment of project in a live environment for others to access without having to be a needy!
 
-### Deployment
+9. **Add onKeyDown for Input:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to contribute to this project, and thank you for using this ChatGPT clone!
