@@ -70,17 +70,17 @@ const Main = () => {
                 {!currentTitle && <h1>AwesomeGPT</h1>}
             </div>
 
-            <div>                  
-                <ul className='feed'>
-                    {currentChat?.map((allChats, index) =>
-                        <li key={index}>
-                            <p>{allChats.role}</p>
-                            <p>{allChats.message}</p>
+            {/* <div>                   */}
+            <div className='feed'>
+                {currentChat?.map((allChats, index) =>
+                    <div key={index}>
+                        <div className={`content ${allChats.role}`}>
                             <p>{allChats.content}</p>
-                        </li>
-                    )}
-                </ul>
+                        </div>
+                    </div>
+                )}
             </div>
+            {/* </div> */}
 
             <div className='user-input-container'>
                 <div className='user-input'>
@@ -98,9 +98,9 @@ const Main = () => {
                     </button>
                 </div>
 
-                <p className='small-text'>
-                    AwesomeGPT can make mistakes. Consider checking important information.
-                </p>
+                <div className='small-text'>
+                    <p>AwesomeGPT can make mistakes. Consider checking important information.</p>
+                </div>
             </div>
         </section>
     </>

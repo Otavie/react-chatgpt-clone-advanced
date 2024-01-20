@@ -5,14 +5,17 @@
   color: white;
 }
 
+p,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  padding: 0 !important;
-  margin: 0 !important;
+  padding: 0;
+  margin: 0;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 }
 
 body {
@@ -76,7 +79,6 @@ code {
 .main {
   margin-left: 250px;
   width: calc(100% - 250px);
-  border: 1px solid white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -85,12 +87,21 @@ code {
 
 .main-header {
   width: 100%;
-  border: 1px solid red;
-  padding: 10px;
   text-align: center;
 }
 
+.feed {
+  padding: 10px 20px;
+  min-height: calc(100vh - 400px);
+  margin-bottom: 90px;
+}
+
 .user-input-container {
+  position: fixed;
+  bottom: 0;
+  width: calc(100% - 250px);
+  border-top: 1px solid black;
+  background-color: #343451;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -99,8 +110,9 @@ code {
 
 .user-input {
   position: relative;
-  width: 90%;
+  width: 100%;
   max-width: 800px;
+  margin-top: 10px;
 }
 
 .user-input input {
@@ -145,4 +157,41 @@ code {
   font-size: 0.85rem;
   text-align: center;
   padding: 0.75rem;
+}
+
+.content.user {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.content p {
+  margin: 0.5rem 0;
+  min-width: 20px;
+  max-width: 80%;
+  width: fit-content;
+  display: flex;
+  padding: 7.5px 20px;
+  padding-bottom: 12px;
+  line-height: 1.5;
+}
+
+.content.user p {
+  border-radius: 10px 10px 0 10px;
+  color: black;
+  background-color: white;
+  background-color: #CCC;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.content.assistant p {
+  border-radius: 10px 10px 0 10px;
+  background-color: #202123;
+  color: black;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.content.assistant p {
+  border-radius: 10px 10px 10px 0;
 }
