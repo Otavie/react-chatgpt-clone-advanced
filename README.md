@@ -28,14 +28,9 @@ This project is a simple clone of a chat application using OpenAI's GPT-3.5 Turb
 
 3. Install dependencies:
 
+   # Navigate to the command line and install dependencies
+
    ```bash
-   # Install backend dependencies
-   npm install
-
-   # Navigate to the frontend directory
-   cd frontend
-
-   # Install frontend dependencies
    npm install
    ```
 
