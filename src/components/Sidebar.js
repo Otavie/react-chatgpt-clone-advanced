@@ -17,7 +17,7 @@ const Sidebar = ({ setChat, setQuery, setCurrentTitle, uniqueTitles }) => {
             <ul className='history'>
                 {uniqueTitles?.map((uniqueTitle, index) => 
                     <li key={index}>
-                        {uniqueTitle}
+                        {uniqueTitle.length > 50 ? (uniqueTitle.slice(0, 50) + '...') : uniqueTitle.slice(0, 50)}
                     </li>
                 )}
             </ul>

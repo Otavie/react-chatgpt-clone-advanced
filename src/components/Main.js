@@ -67,10 +67,9 @@ const Main = () => {
 
         <section className='main'>
             <div className='main-header'>
-                {!currentTitle && <h1>AwesomeGPT</h1>}
+                {!currentTitle && <h1 style={{ marginTop:'10px' }}>AwesomeGPT</h1>}
             </div>
 
-            {/* <div>                   */}
             <div className='feed'>
                 {currentChat?.map((allChats, index) =>
                     <div key={index}>
@@ -80,7 +79,6 @@ const Main = () => {
                     </div>
                 )}
             </div>
-            {/* </div> */}
 
             <div className='user-input-container'>
                 <div className='user-input'>
@@ -99,7 +97,7 @@ const Main = () => {
                 </div>
 
                 <div className='small-text'>
-                    <p>AwesomeGPT can make mistakes. Consider checking important information.</p>
+                    <p>AwesomeGPT is built using ChatGPT API!</p>
                 </div>
             </div>
         </section>

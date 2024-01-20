@@ -195,3 +195,19 @@ code {
 .content.assistant p {
   border-radius: 10px 10px 10px 0;
 }
+
+.history {
+  padding: 20px 15px 20px 30px;
+  background-color: #202123;
+  height: 100%;
+}
+
+.history li {
+  list-style: square;
+  cursor: pointer;
+  margin-bottom: 0.3rem;
+}
+
+.history li:hover {
+  color: #CCC;
+}
