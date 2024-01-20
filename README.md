@@ -63,6 +63,4 @@ This project is a simple clone of a chat application using OpenAI's GPT-3.5 Turb
 
 8. **Deployment**: Deployment of project in a live environment for others to access without having to be a needy!
 
-9. **Add onKeyDown for Input:**
-
 Feel free to contribute to this project, and thank you for using this ChatGPT clone!

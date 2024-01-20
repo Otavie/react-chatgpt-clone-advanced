@@ -21,9 +21,18 @@ const Main = () => {
         try {
             const response = await fetch('http://localhost:5080/completions', requestOptions)
             const data = await response.json(response)
-            setChat(data.choices[0].message)
+            setChat(data.choices[0].message, () => {
+                setQuery(null)
+            })
         } catch (error) {
             console.error('Error sending message: ', error)
+        }
+    }
+
+    const handlePressEnter = (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            handleSend();
         }
     }
     
@@ -54,7 +63,7 @@ const Main = () => {
 
     const currentChat = previousChats.filter(previousChat => previousChat.title === currentTitle)
     const uniqueTitles = Array.from(new Set(previousChats.map(previousChat => previousChat.title)))
-    console.log("Unique Titles: ", uniqueTitles)
+    // console.log("Unique Titles: ", uniqueTitles)
 
   return (
     <>
@@ -87,6 +96,7 @@ const Main = () => {
                         onChange={(e) => setQuery(e.target.value)}
                         type="text"
                         placeholder='Type a message...'
+                        onKeyDown={handlePressEnter}
                     />
                     <button
                         className='submit'
